@@ -26,8 +26,8 @@ dependencies:
     - cdflib==0.3.*
     - hapiclient==0.2.*
     - hapiplot==0.2.*
-    - kamodo==21.10.*
-    - pysat==3.0.*
+    # - kamodo==21.10.*
+    # - pysat==3.0.*
     - pyspedas==1.2.*
     - pytplot-mpl-temp==2.0.2
     - spacepy==0.2.*
