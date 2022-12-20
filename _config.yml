@@ -3,7 +3,7 @@
 
 title: PyHC Gallery
 author: Python in Heliophysics Community
-logo: logo.png
+logo: "src/img/pyhc-logo.png"
 
 execute:
   execute_notebooks: cache
