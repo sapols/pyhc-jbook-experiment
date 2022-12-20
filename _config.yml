@@ -8,7 +8,7 @@ logo: logo.png
 execute:
   execute_notebooks: cache
   run_in_temp: false
-  timeout: 120
+  timeout: 420
   allow_errors: true
 
 launch_buttons:
