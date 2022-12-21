@@ -159,3 +159,5 @@ _build
 
 # Data files
 *.cdf
+*.fits
+*.tplot
