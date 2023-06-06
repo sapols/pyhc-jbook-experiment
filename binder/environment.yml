@@ -1,0 +1,41 @@
+name: pyhc
+channels:
+  - conda-forge
+dependencies:
+  # Python
+  - python=3.10
+  - pip
+  # Testing and jupyter-book build
+  - jupyter-book=0.13.1
+  - pytest
+  - pytest-xdist
+  - nbmake
+  # Gallery dependencies:
+  - aiapy
+  - astropy
+  - cdflib
+  - matplotlib
+  - netcdf4
+  - numpy
+  - pandas
+  - plasmapy
+  - pywavelets  # from pyspedas
+  - scipy
+  - sunpy
+  - viresclient
+  - watermark
+  - xarray
+  # misc dependencies from pip packages below
+  #  (source the install from conda-forge instead where possible)
+  - bokeh=2.4.3  # (pytplot-mpl-temp requires < 3)
+  - joblib
+  - numexpr
+  - pytables  # ("tables" in pypi)
+  - pip:
+    - cdasws  # from pyspedas
+    - geopack  # from pyspedas
+    - hapiclient
+    - hapiplot
+    - pyspedas==1.4.4
+    - pytplot-mpl-temp  # from pyspedas; provides pytplot package!
+    - spacepy

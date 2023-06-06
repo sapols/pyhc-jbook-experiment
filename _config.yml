@@ -6,9 +6,9 @@ author: Python in Heliophysics Community
 logo: logo.png
 
 execute:
-  execute_notebooks: cache
-  run_in_temp: true
-  timeout: 120
+  execute_notebooks: "off"
+  run_in_temp: false
+  timeout: 300
   allow_errors: true
 
 launch_buttons:

@@ -9,83 +9,58 @@ on:
   workflow_dispatch:
 
 jobs:
+  pre-commit:
+    name: Format (pre-commit)
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: pre-commit/action@v3.0.0
+      with:
+        extra_args: --hook-stage manual --all-files
   build-book:
+    needs: pre-commit
     runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash -l {0}
     steps:
-      - uses: actions/checkout@v2
-      # Create pyhc conda environment
+      # Setup conda environment
+      - uses: actions/checkout@v3
       - name: Provision conda env
-        uses: conda-incubator/setup-miniconda@v2
+        uses: conda-incubator/setup-miniconda@v2.1.1
         with:
           activate-environment: pyhc
-          environment-file: environment-strict.yml
-      - name: conda list
+          environment-file: binder/pyhc-gallery-fixed-conda.txt
+      - name: Add pip packages
         run: |
+          pip install -r binder/pyhc-gallery-fixed-pip.txt
+      - name:  Display environment
+        run: |
+          conda info
           conda list
-      # Build Jupyter Book site
+      # Execute notebooks with nbmake
+      - name: Execute notebooks with nbmake
+        run: |
+          pytest --numprocesses 2 --nbmake --overwrite src/*.ipynb
+      # Build Jupyter Book site from pre-executed notebooks
       - name: Run jupyter-book build
+        if: always()  # so that this runs even when pytest above reports failure
         run: |
           jupyter-book build .
       # Deploy online preview
       - name: Deploy to Netlify
+        if: always()
         uses: nwtgck/actions-netlify@v1.2
         with:
           publish-dir: './_build/html'
-          production-branch: main
+          production-deploy: false
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions"
-          github-deployment-environment: staging
-          github-deployment-description: "jbook built from environment-strict.yml"
-          alias: preview-${{ github.event.number }}
+          github-deployment-environment: netlify-deploy
+          github-deployment-description: "jbook preview on netlify"
           enable-pull-request-comment: true
           enable-commit-comment: true
           overwrites-pull-request-comment: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        timeout-minutes: 1
-  build-book-latest-versions:
-      runs-on: ubuntu-latest
-      defaults:
-        run:
-          shell: bash -l {0}
-      steps:
-        - uses: actions/checkout@v2
-        # Create pyhc conda environment
-        - name: Provision conda env
-          uses: conda-incubator/setup-miniconda@v2
-          with:
-            miniforge-variant: Mambaforge
-            miniforge-version: latest
-            use-mamba: true
-            activate-environment: pyhc
-            environment-file: environment-latest.yml
-        - name: conda list
-          run: |
-            conda list
-        # Build Jupyter Book site
-        - name: Run jupyter-book build
-          run: |
-            jupyter-book build .
-        # Deploy online preview
-        - name: Deploy to Netlify
-          uses: nwtgck/actions-netlify@v1.2
-          with:
-            publish-dir: './_build/html'
-            production-deploy: false
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-            deploy-message: "Deploy from GitHub Actions - latest package versions"
-            github-deployment-environment: latest-versions
-            github-deployment-description: "jbook built from environment-latest.yml"
-            alias: preview-${{ github.event.number }}-latest-versions
-            enable-pull-request-comment: false
-            enable-commit-comment: true
-            overwrites-pull-request-comment: false
-          env:
-            NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-            NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          timeout-minutes: 1
-
