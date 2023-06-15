@@ -31,9 +31,9 @@ msise00
 ndcube
 nexradutils
 ocbpy
-OMMBV
+# OMMBV  # Binder fails to building wheel for OMMBV
 pydarn
-pyflct
+# pyflct  # Binder fails building wheel for pyflct
 pytplot-mpl-temp
 pyzenodo3
 reesaurora
