@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Use the path from the conda environment for the shell script
-export PATH=$CONDA_PREFIX/bin:$PATH
+export PATH=${CONDA_DIR}/bin:$PATH
 
 # Install pip dependencies
 pip install -r binder/pyhc-requirements.txt
