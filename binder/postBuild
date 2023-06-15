@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pip install -r requirements/pyhc-requirements.txt
+pip install -r requirements/pyhc-packages-requirements.txt
+

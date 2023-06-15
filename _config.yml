@@ -20,7 +20,7 @@ launch_buttons:
 
 repository:
   url: https://github.com/sapols/pyhc-jbook-experiment
-  branch: shawn-book-update-2
+  branch: shawn-book-update-3
 
 html:
   favicon: "src/img/favicon.png"
