@@ -4,7 +4,6 @@ git+https://github.com/nasa/Kamodo.git
 plasmapy
 pysat
 pyspedas
-numpy==1.24.3  # Trying to fix spacepy build error that involved numpy
 spacepy
 sunpy
 aacgmv2
