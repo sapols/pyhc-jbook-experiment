@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Use the path from the conda environment for the shell script
-# export PATH=${CONDA_DIR}/bin:$PATH
+export PATH=${CONDA_DIR}/bin:$PATH
 
 # Update packages list and install Fortran compiler
-sudo apt-get update
-sudo apt-get install -y gfortran
+# sudo apt-get update
+# sudo apt-get install -y gfortran
 
 # Install pip dependencies
 pip install -r binder/pyhc-requirements.txt
