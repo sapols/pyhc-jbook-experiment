@@ -5,7 +5,7 @@ channels:
 dependencies:
   - python=3.8.8
   - gfortran_linux-64  # - gfortran=11.2  # needed for ffnet dependency of spacepy
-  - jupyter-book=0.12.3
+  - jupyter-book=0.15.1
   - jupyterlab=3.5.0
   - jupyterlab-git=0.39.3
   - pip
