@@ -1,4 +1,4 @@
-aacgmv2>=2.6.2
+aacgmv2 # version was >=2.6.2 (although Binder did build with this version... beware commenting it out)
 aiohttp
 aiosignal>=1.1.2
 aniso8601>=0.82
@@ -194,7 +194,7 @@ requests-toolbelt>=0.7.1
 sciencedates
 scikit-image>=0.18.0
 scikit-learn>=0.22
-# scipy>=1.8,<1.9.2  # Binder fails here trying to build wheel (Binder installs scipy-1.10.1 left to its own devices, from deepdish)
+scipy>=1.8,<1.9.2  # Binder fails here trying to build wheel (Binder installs scipy-1.10.1 left to its own devices, from deepdish)
 semantic-version>=2.8
 send2trash
 setuptools
