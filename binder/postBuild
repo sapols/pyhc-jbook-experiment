@@ -1,15 +1,18 @@
 #!/bin/bash
 
-# Activate the notebook environment
+# Try to activate the "notebook" environment (doesn't seem to work)
 source activate notebook
 
 # Use the path from the conda environment for the shell script
 export PATH=${CONDA_DIR}/bin:$PATH
 
 # Update packages list and install Fortran compiler
-# sudo apt-get update
-# sudo apt-get install -y gfortran
+# You can use a file `apt.txt` to specify apt-get installs (see: https://mybinder.readthedocs.io/en/latest/using/config_files.html#apt-txt-install-packages-with-apt-get)
+# apt-get update
+# apt-get install -y gfortran
 
 # Install pip dependencies
-pip install -r binder/pyhc-requirements.txt
-pip install -r binder/pyhc-packages-requirements.txt
+# pip install -r binder/pyhc-requirements.txt
+# pip install -r binder/pyhc-packages-requirements.txt
+conda run -n notebook pip install -r binder/pyhc-requirements.txt
+conda run -n notebook pip install -r binder/pyhc-packages-requirements.txt
