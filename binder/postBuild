@@ -4,8 +4,8 @@
 # export PATH=${CONDA_DIR}/bin:$PATH
 
 # Update packages list and install Fortran compiler
-apt-get update
-apt-get install -y gfortran
+sudo apt-get update
+sudo apt-get install -y gfortran
 
 # Install pip dependencies
 pip install -r binder/pyhc-requirements.txt
