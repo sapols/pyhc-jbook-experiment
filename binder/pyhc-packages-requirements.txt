@@ -1,15 +1,15 @@
 hapiclient
 kamodo
-git+https://github.com/nasa/Kamodo.git
+# git+https://github.com/nasa/Kamodo.git  # Causes Binder to try to install Spacepy
 plasmapy
 pysat
 pyspedas
-# spacepy
+# spacepy  # Binder fails here trying to install build dependencies
 sunpy
 aacgmv2
 aiapy
 aidapy
-# apexpy
+# apexpy  # Binder fails here trying to prepare metadata (pyproject.toml)
 astrometry-azel
 cdflib
 dascutils
