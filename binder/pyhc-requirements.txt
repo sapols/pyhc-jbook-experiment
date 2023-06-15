@@ -133,6 +133,7 @@ netcdf4>=1.6.2
 networkx>=2.8
 numba
 numexpr>=2.6.2
+numpy>=1.23.0,<1.25
 omegaconf>=1.4,<1.5
 packaging>=21.3
 palettable

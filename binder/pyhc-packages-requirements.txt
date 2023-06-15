@@ -4,12 +4,12 @@ git+https://github.com/nasa/Kamodo.git
 plasmapy
 pysat
 pyspedas
-spacepy
+# spacepy
 sunpy
 aacgmv2
 aiapy
 aidapy
-apexpy
+# apexpy
 astrometry-azel
 cdflib
 dascutils
