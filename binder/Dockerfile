@@ -1,1 +1,1 @@
-FROM spolson/pyhc-image:latest
+FROM spolson/pyhc-gallery:latest
