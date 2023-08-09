@@ -14,5 +14,4 @@ export PATH=${CONDA_DIR}/bin:$PATH
 # Install pip dependencies
 # pip install -r binder/pyhc-requirements.txt
 # pip install -r binder/pyhc-packages-requirements.txt
-conda run -n notebook pip install -r binder/pyhc-requirements.txt
-conda run -n notebook pip install -r binder/pyhc-packages-requirements.txt
+conda run -n notebook pip install -r binder/requirements.txt
