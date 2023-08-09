@@ -2,10 +2,7 @@ aiapy
 astropy
 matplotlib
 numpy
-os
-pickle
 pyspedas
 pytplot
 spacepy
 sunpy
-urllib
