@@ -2,7 +2,7 @@ aiapy
 astropy
 matplotlib
 numpy
-pyspedas
 pytplot-mpl-temp
+pyspedas
 spacepy
 sunpy
