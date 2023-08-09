@@ -3,6 +3,6 @@ astropy
 matplotlib
 numpy
 pyspedas
-pytplot
+pytplot-mpl-temp
 spacepy
 sunpy
