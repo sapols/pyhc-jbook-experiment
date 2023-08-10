@@ -3,10 +3,10 @@
 
 title: PyHC Gallery
 author: Python in Heliophysics Community
-logo: "src/img/pyhc-logo.png"
+logo: "src/_static/img/pyhc-logo.png"
 
 execute:
-  execute_notebooks: "auto"
+  execute_notebooks: "cache"
   cache: ""
   exclude_patterns: ["src/retrieve_compress.ipynb"]
   timeout: 420
@@ -25,7 +25,7 @@ repository:
   branch: shawn-book-update-minimal
 
 html:
-  favicon: "src/img/favicon.png"
+  favicon: "src/_static/img/favicon.png"
   use_issues_button: true
   use_repository_button: true
 
@@ -36,3 +36,9 @@ parse:
     - substitution
     - colon_fence
     - deflist
+
+sphinx:
+  master_doc: src/welcome
+  config:
+    html_static_path:
+      - "src/_static"
