@@ -6,10 +6,12 @@ author: Python in Heliophysics Community
 logo: "src/img/pyhc-logo.png"
 
 execute:
-  execute_notebooks: cache
-  run_in_temp: false
+  execute_notebooks: "auto"
+  cache: ""
+  exclude_patterns: ["src/retrieve_compress.ipynb"]
   timeout: 420
-  allow_errors: true
+  run_in_temp: true
+  allow_errors: false
 
 launch_buttons:
   notebook_interface: jupyterlab
@@ -20,7 +22,7 @@ launch_buttons:
 
 repository:
   url: https://github.com/sapols/pyhc-jbook-experiment
-  branch: shawn-book-update-3
+  branch: shawn-book-update-minimal
 
 html:
   favicon: "src/img/favicon.png"
