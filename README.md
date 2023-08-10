@@ -23,3 +23,6 @@ Three environments for different use cases (same packages configured, but differ
 - `environment-strict.yml`: specific versions used for better reproducability  
   (`conda env export --name pyhc --file environment-strict.yml`)
 - `environment-latest.yml` builds environment with latest versions to test against before manually updating `environment.yml`
+
+## TODO: Add a contribution guide!
+Like the following: https://github.com/heliophysicsPy/gallery/blob/main/README.md
