@@ -3,7 +3,7 @@
 This is a demo of using [Jupyter Book](https://jupyterbook.org/) for the [PyHC gallery](https://github.com/heliophysicsPy/gallery).
 
 ## Contributing
-The process of adding a new example notebook to the PyHC Gallery is trivially easy for PyHC members. It has not been automated yet, so the steps are simply: 
+The process of adding a new example notebook to this PyHC Gallery is trivially easy for PyHC members. It has not been automated yet, so the steps are simply: 
 
   1. Open a PR that adds your notebook to `book/src/`
   2. Shawn will take it from there
