@@ -22,7 +22,7 @@ launch_buttons:
 
 repository:
   url: https://github.com/sapols/pyhc-jbook-experiment
-  branch: shawn-book-update-minimal
+  branch: shawn-book-update-minimal-fixup
 
 html:
   favicon: "_static/img/favicon.png"
