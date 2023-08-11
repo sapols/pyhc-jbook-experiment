@@ -3,7 +3,7 @@
 
 title: PyHC Gallery
 author: Python in Heliophysics Community
-logo: "src/_static/img/pyhc-logo.png"
+logo: "_static/img/pyhc-logo.png"
 
 execute:
   execute_notebooks: "cache"
@@ -25,7 +25,7 @@ repository:
   branch: shawn-book-update-minimal
 
 html:
-  favicon: "src/_static/img/favicon.png"
+  favicon: "_static/img/favicon.png"
   use_issues_button: true
   use_repository_button: true
 
@@ -41,4 +41,4 @@ sphinx:
   master_doc: src/welcome
   config:
     html_static_path:
-      - "src/_static"
+      - "_static"
