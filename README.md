@@ -5,6 +5,9 @@ This is a demo of using [Jupyter Book](https://jupyterbook.org/) for the [PyHC g
 ## TODO: Add a contribution guide!
 Like the following: https://github.com/heliophysicsPy/gallery/blob/main/README.md
 
+In all likelihood, the steps will be:
+  1. Open a PR that adds your notebook to `book/src/`
+  2. Shawn will take it from there
 
 ## Development
 
