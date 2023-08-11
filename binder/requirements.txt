@@ -1,0 +1,8 @@
+aiapy
+astropy
+matplotlib
+numpy
+pytplot-mpl-temp
+pyspedas
+spacepy
+sunpy

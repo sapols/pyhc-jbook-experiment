@@ -1,0 +1,45 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: PyHC Gallery
+author: Python in Heliophysics Community
+logo: "_static/img/pyhc-logo.png"
+
+execute:
+  execute_notebooks: "cache"
+  cache: ""
+  exclude_patterns: ["src/retrieve_compress.ipynb"]
+  timeout: 420
+  run_in_temp: true
+  allow_errors: false
+
+launch_buttons:
+  notebook_interface: jupyterlab
+  binderhub_url: "https://mybinder.org"
+  # jupyterhub_url: "https://ingeo.datatransport.org/v3/jupyter/"
+  thebe: true
+  colab_url: "https://colab.research.google.com"
+
+repository:
+  url: https://github.com/sapols/pyhc-jbook-experiment
+  branch: main
+  path_to_book: book/
+
+html:
+  favicon: "_static/img/favicon.png"
+  use_issues_button: true
+  use_repository_button: true
+
+parse:
+  myst_enable_extensions:
+    - dollarmath
+    - linkify
+    - substitution
+    - colon_fence
+    - deflist
+
+sphinx:
+  master_doc: src/welcome
+  config:
+    html_static_path:
+      - "_static"

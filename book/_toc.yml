@@ -1,0 +1,17 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: src/welcome
+parts:
+- caption: Core Package Demos
+  chapters:
+  - file: src/planet_locations
+  - file: src/units_demo
+  - file: src/pyspedas_demo
+  - file: src/coordinates_demo
+  - file: src/coordinate_systems
+  - file: src/retrieve_compress
+- caption: Other Package Demos
+  chapters:
+  - file: src/pytplot_demo

@@ -156,3 +156,8 @@ cython_debug/
 
 # Jupyter book build
 _build
+
+# Data files
+*.cdf
+*.fits
+*.tplot
