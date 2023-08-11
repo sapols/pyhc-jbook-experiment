@@ -22,7 +22,7 @@ launch_buttons:
 
 repository:
   url: https://github.com/sapols/pyhc-jbook-experiment
-  branch: shawn-book-update-minimal-fixup
+  branch: main
   path_to_book: book/
 
 html:
