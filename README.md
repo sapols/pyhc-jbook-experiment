@@ -12,8 +12,7 @@ Shawn will do the work of updating the table of contents and the Python environm
 
 ## Development Environment
 
-Binder link: https://mybinder.org/v2/gh/smithara/pyhc-jbook-experiment/main
-             https://mybinder.org/v2/gh/sapols/pyhc-jbook-experiment/main?urlpath=lab/tree/book/src
+Binder link: https://mybinder.org/v2/gh/sapols/pyhc-jbook-experiment/main?urlpath=lab/tree/book/src
 
 Binder is the primary backend used for running the examples in this gallery. It builds the Python environment from the files stored in this repo's `binder/` directory. Note that we use a minimal set of dependencies needed to run the examples, which speeds up Binder load times. 
 
